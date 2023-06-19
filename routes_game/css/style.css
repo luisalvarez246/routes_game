@@ -1,0 +1,36 @@
+body
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	background-image: url("../resources/imgs/backgrounds/marauders-map-contents-3ol6gsqz0645bqjl.jpeg");
+}
+
+.figure
+{
+	display: flex;
+	width: 10rem;
+	height: 10rem;
+	border-radius: 50%;
+	background-color: black;
+	overflow: hidden;
+}
+
+#harry
+{
+	width: 100%;
+	object-fit: cover;
+}
+
+.advice
+{
+	width: 50%;
+	display: flex;
+}
+
+#advice
+{
+	width: 100%;
+}

@@ -1,0 +1,37 @@
+#! /bin/bash
+
+image="harry.jpeg"
+old_hint="hint.png"
+new_hint="$1.png"
+part=$1
+
+if [[ $part == "part1" ]]
+	then
+		find . -name "$image" -exec mv {} ./routes_game/resources/imgs \;
+		find . -name "$old_hint" -exec mv {} ./routes_game/resources/imgs/hints/part5.png \;
+		find . -name "$new_hint" -exec mv {} ./routes_game/resources/imgs/hints/hint.png \;
+elif [[ $part == "part2" ]]
+	then
+		mkdir ./routes_game/resources/imgs/hogwarts
+		find . -name "$image" -exec mv {} ./routes_game/resources/imgs/hogwarts \;
+		find . -name "$old_hint" -exec mv {} ./routes_game/resources/imgs/hints/part1.png \;
+		find . -name "$new_hint" -exec mv {} ./routes_game/resources/imgs/hints/hint.png \;
+elif [[ $part == "part3" ]]
+	then
+		mkdir ./common_room
+		find . -name "$image" -exec mv {} ./common_room \;
+		find . -name "$old_hint" -exec mv {} ./routes_game/resources/imgs/hints/part2.png \;
+		find . -name "$new_hint" -exec mv {} ./routes_game/resources/imgs/hints/hint.png \;
+elif [[ $part == "part4" ]]
+	then
+		find . -name "$image" -exec mv {} ./routes_game \;
+		find . -name "$old_hint" -exec mv {} ./routes_game/resources/imgs/hints/part3.png \;
+		find . -name "$new_hint" -exec mv {} ./routes_game/resources/imgs/hints/hint.png \;
+elif [[ $part == "part5" ]]
+	then
+		find . -name "$image" -exec mv {} ./ \;
+		find . -name "$old_hint" -exec mv {} ./routes_game/resources/imgs/hints/part4.png \;
+		find . -name "$new_hint" -exec mv {} ./routes_game/resources/imgs/hints/hint.png \;
+else
+		echo "wrong command see Instructions at Readme.md"
+	fi
